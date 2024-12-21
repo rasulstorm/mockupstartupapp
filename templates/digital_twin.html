@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Twin Visualization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">QORAP</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/showcase/store-reservation">Store Reservation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="digital-twin-info">
+        <h2>What is a Digital Twin?</h2>
+        <p>
+            A <strong>Digital Twin</strong> is a virtual representation of a physical system, process, or asset that uses 
+            real-time data and advanced simulations to replicate its functionality. It enables businesses to monitor, analyze, 
+            and optimize operations by bridging the gap between the physical and digital worlds. In logistics, Digital Twins 
+            provide a detailed view of storage facilities, track inventory, predict equipment performance, and improve decision-making 
+            with data-driven insights.
+        </p>
+    </div>
+    
+
+    <main class="digital-twin-page">
+        <h1>Digital Twin Visualization</h1>
+        <div id="twin-container"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 QORAP. All rights reserved.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/digital_twin.js') }}"></script>
+</body>
+</html>
